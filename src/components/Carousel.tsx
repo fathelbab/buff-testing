@@ -22,10 +22,15 @@ const slides = [
     image:
       "https://images.unsplash.com/photo-1525059696034-4967a8e1dca2?q=80&w=1200&auto=format&fit=crop",
   },
+  {
+    id: 5,
+    image:
+      "https://images.unsplash.com/photo-1513104890138-7c749659a591?q=80&w=1200&auto=format&fit=crop",
+  },
 ];
 
-export default function PromoCarousel() {
-  const [current, setCurrent] = useState(1);
+export default function CenterModeCarousel() {
+  const [current, setCurrent] = useState(0);
 
   const nextSlide = () => {
     setCurrent((prev) => (prev + 1) % slides.length);
@@ -36,28 +41,40 @@ export default function PromoCarousel() {
   };
 
   return (
-    <div className="w-full bg-[#f4f4f4] py-5">
-      <div className="relative mx-auto flex max-w-7xl items-center justify-center gap-4 overflow-hidden px-4">
-        {/* Left Button */}
-        <button
-          onClick={prevSlide}
-          className="absolute left-2 z-20 rounded-full bg-white p-2 shadow-lg transition hover:scale-110"
-        >
-          <ChevronLeft className="h-5 w-5" />
-        </button>
+    <div className="relative w-full overflow-hidden bg-[#f5f5f5] py-10">
+      {/* Carousel Track */}
+      <div className="relative mx-auto flex h-[420px] max-w-7xl items-center justify-center">
+        {slides.map((slide, index) => {
+          const offset =
+            (index - current + slides.length) % slides.length;
 
-        {/* Slides */}
-        <div className="flex w-full items-center justify-center gap-5">
-          {slides.map((slide, index) => {
-            const isCenter = index === current;
+          let position = offset;
 
-            return (
+          // Handle left side looping
+          if (position > slides.length / 2) {
+            position -= slides.length;
+          }
+
+          const isActive = position === 0;
+
+          return (
+            <div
+              key={slide.id}
+              className="absolute transition-all duration-500 ease-in-out"
+              style={{
+                transform: `
+                  translateX(${position * 320}px)
+                  scale(${isActive ? 1 : 0.82})
+                `,
+                zIndex: isActive ? 20 : 10 - Math.abs(position),
+                opacity: Math.abs(position) > 2 ? 0 : 1,
+              }}
+            >
               <div
-                key={slide.id}
-                className={`relative overflow-hidden rounded-3xl transition-all duration-500 ${
-                  isCenter
-                    ? "h-[450px] w-[55%] scale-100 opacity-100"
-                    : "h-[450px] w-[22%] scale-90 opacity-80"
+                className={`overflow-hidden rounded-[28px] shadow-2xl transition-all duration-500 ${
+                  isActive
+                    ? "h-[420px] w-[620px]"
+                    : "h-[360px] w-[260px]"
                 }`}
               >
                 <img
@@ -65,27 +82,30 @@ export default function PromoCarousel() {
                   alt=""
                   className="h-full w-full object-cover"
                 />
-
-                {/* Dark Overlay for side cards */}
-                {!isCenter && (
-                  <div className="absolute inset-0 bg-black/10" />
-                )}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
+
+        {/* Left Button */}
+        <button
+          onClick={prevSlide}
+          className="absolute left-4 z-30 rounded-full bg-white p-3 shadow-lg transition hover:scale-110"
+        >
+          <ChevronLeft className="h-5 w-5" />
+        </button>
 
         {/* Right Button */}
         <button
           onClick={nextSlide}
-          className="absolute right-2 z-20 rounded-full bg-white p-2 shadow-lg transition hover:scale-110"
+          className="absolute right-4 z-30 rounded-full bg-white p-3 shadow-lg transition hover:scale-110"
         >
           <ChevronRight className="h-5 w-5" />
         </button>
       </div>
 
-      {/* Indicators */}
-      <div className="mt-5 flex justify-center gap-2">
+      {/* Dots */}
+      <div className="mt-6 flex justify-center gap-2">
         {slides.map((_, index) => (
           <button
             key={index}

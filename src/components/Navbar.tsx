@@ -11,7 +11,7 @@ export default function Navbar() {
                 <img
                     src={myImage}
                 />
-                <div className="flex gap-4">
+                <div className="flex gap-2">
                     <Select placeholder="Add Location"
                         classNames={{
    

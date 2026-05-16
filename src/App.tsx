@@ -4,7 +4,9 @@ import './App.css'
 function App() {
   return (
     <>
-   <Home></Home>
+    <div className="h-screen bg-surface-page flex flex-col overflow-hidden">
+      <Home></Home>
+   </div>
     </>
   )
 }

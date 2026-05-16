@@ -6,17 +6,18 @@ export default function Home() {
 
   return (
     <>
-    <div>
-      <Navbar></Navbar>
-    </div>
-     <div>
-      <h3 className="border-2 justify-items-center border-[#868585] font-extrabold inline p-2 text-black">
-        THE REAL THING</h3>
-      <h1 className="font-stretch-expanded font-extrabold">HUNGRY FOR MORE?</h1>
-     </div>
-    <div>
-     <Carousel></Carousel>
-  </div>
+      <div>
+        <Navbar></Navbar>
+      </div>
+      <div>
+        <div className="border-[2] border-border-default rounded-[8] p-[16]">
+          <span className="text-headline-xs text-text-body-default"> THE REAL THING </span>
+        </div>
+        <h2 className="text-headline-2xl text-text-body-default text-center"> HUNGRY FOR MORE? </h2>
+      </div>
+      <div>
+        <Carousel></Carousel>
+      </div>
 
     </>
   )

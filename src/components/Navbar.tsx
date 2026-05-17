@@ -15,7 +15,7 @@ export default function Navbar() {
             <nav className="flex items-center justify-between p-4 text-black shadow-sm md:px-8">
 
                 <img
-                    className="w-auto object-contain md:w-[150px]"
+                    className="w-[125px] md:w-[150px] object-scale-down"
                     src={myImage}
                     alt="Logo"
                 />
@@ -23,12 +23,12 @@ export default function Navbar() {
                 <div className="hidden items-center gap-3 lg:flex">
                     <LocationSelect/>
 
-                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white  text-black font-bold py-2 px-4 rounded">
+                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white  text-black font-bold py-2 px-4 rounded-lg">
                         <TbShoppingBag />
                         PICKUP
                     </button>
 
-                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded">
+                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded-lg">
                         <BiStoreAlt />
                         DINE IN
                     </button>

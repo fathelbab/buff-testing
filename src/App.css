@@ -1,8 +1,11 @@
 @import "tailwindcss";
 
+
+@theme {
+  --color-surface-brand: #FF5F00;
+}
  .swiper {
   padding-top: 10px;
-  padding-bottom: 50px;
   --swiper-pagination-bullet-horizontal-gap: 4px;
   --swiper-pagination-bullet-vertical-gap: 6px;
 }
@@ -29,6 +32,7 @@
   height: 8px;
   background: #1a1a1a;
 }
+
 
 /* .swiper {
   padding-top: 20px;

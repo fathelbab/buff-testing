@@ -22,7 +22,7 @@ const slides = [
 
 export default function Carousel() {
   return (
-    <div className="relative w-full bg-[#f2f2f2]">
+    <div className="swiper relative w-full">
       <Swiper
         modules={[Navigation, Pagination, Autoplay]}
         centeredSlides
@@ -35,28 +35,14 @@ export default function Carousel() {
         allowTouchMove
         freeMode={true}
         autoplay={{
-          delay: 1500,
+          delay: 6000,
           disableOnInteraction: false,
           pauseOnMouseEnter: true,
         }}
-        // navigation
         pagination={{
           clickable: true,
           type: 'bullets',
-          dynamicBullets: true,
         }}
-        breakpoints={{
-          320: {
-            slidesPerView: 1.1,
-          },
-          768: {
-            slidesPerView: 1.5,
-          },
-          1024: {
-            slidesPerView: 1.9,
-          },
-        }}
-        className="promo-swiper"
       >
         {slides.concat(slides).map((image, index) => (
           <SwiperSlide key={index}>

@@ -1,36 +1,6 @@
 @import "tailwindcss";
 
- .swiper {
-  padding-top: 10px;
-  padding-bottom: 50px;
-  --swiper-pagination-bullet-horizontal-gap: 4px;
-  --swiper-pagination-bullet-vertical-gap: 6px;
-}
-
-.swiper-pagination {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 6px;
-}
-
-.swiper-pagination-bullet {
-  width: 8px;
-  height: 8px;
-  background: #9b9b9b;
-  opacity: 1;
-  border-radius: 999px;
-  margin: 0 !important;
-  transition: all 0.3s ease;
-}
-
-.swiper-pagination-bullet-active {
-  width: 32px;
-  height: 8px;
-  background: #1a1a1a;
-}
-
-/* .swiper {
+.swiper {
   padding-top: 20px;
   padding-bottom: 50px;
 }
@@ -266,4 +236,4 @@
     right: 0;
     border-right-color: var(--border);
   }
-} */
+}

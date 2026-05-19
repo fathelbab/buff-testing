@@ -25,7 +25,7 @@ export default function Home() {
       <div className="flex flex-col items-center pt-8 md:pt-12">
         <span className="outline-1 outline-[#E8E8E8] p-3 rounded font-extrabold text-lg md:text-xl md:p-4"> OUR MENU </span>
       </div>
-      <div>
+      <div className="px-4 py-6 md:px-8 lg:px-12">
         <OurMenu />
       </div>
 

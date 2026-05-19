@@ -4,12 +4,12 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function AddressBox() {
     return (
-        <div className="mx-auto flex max-w-[1500px] items-center rounded-[24px] bg-[#FAFAFA] p-4 lg:pb-10 lg:pt-8 lg:px-6 shadow-xl">
+        <div className="mx-auto flex max-w-375 items-center rounded-3xl bg-[#FAFAFA] p-4 lg:pb-10 lg:pt-8 lg:px-6 shadow-xl">
             {/* LEFT SECTION */}
             <div className="hidden md:flex items-center pr-1">
                 <img
                     src={image}
-                    className="w-xl md:w-[280px] object-scale-down md:p-2"
+                    className="w-xl md:w-70 object-scale-down md:p-2"
                 />
             </div>
 
@@ -30,7 +30,7 @@ export default function AddressBox() {
                         />
                     </div>
                     <div className="flex gap-2 items-center">
-                        <button className="md:w-[130px] w-[60px] py-3 items-center rounded-xl bg-orange-500 font-bold text-white shadow-md transition hover:bg-orange-700">
+                        <button className="md:w-32.5 w-15 py-3 items-center rounded-xl bg-orange-500 font-bold text-white shadow-md transition hover:bg-orange-700">
                             <span className="hidden md:inline">SEARCH HERE</span>
                             <span className="md:hidden">GO</span>
                         </button>

@@ -4,7 +4,7 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function AddressBox() {
     return (
-        <div className="mx-auto flex max-w-375 items-center rounded-3xl bg-[#FAFAFA] p-4 lg:pb-10 lg:pt-8 lg:px-6 shadow-xl">
+        <div className="flex w-full items-center rounded-3xl bg-[#FAFAFA] p-4 shadow-xl lg:px-6 lg:pb-10 lg:pt-8">        
             {/* LEFT SECTION */}
             <div className="hidden md:flex items-center pr-1">
                 <img

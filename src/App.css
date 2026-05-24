@@ -1,8 +1,15 @@
+@import url('https://rsms.me/inter/inter.css');
 @import "tailwindcss";
-
 
 @theme {
   --color-surface-brand: #FF5F00;
+  --color-surface-light: #FFDFCC;
+  --color-surface-dark: #0A0A0A;
+  --color-page: #F7F7F7;
+  --color-action-hover: #CC4C00;
+  --color-action-hover-light: #FFEFE5;
+  --color-page-dark: #1A1A1A;
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
 }
  .swiper {
   padding-top: 10px;

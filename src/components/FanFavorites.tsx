@@ -27,8 +27,8 @@ export default function FanFavorites() {
                             />
 
                             {/* FLOATING LABEL */}
-                            <div className="absolute bottom-0 z-10 flex w-[120px] md:w-[155px] lg:w-[200px] items-center justify-center rounded-lg outline-2 outline-[#E8E8E8] bg-[#FAFAFA] text-center font-extrabold md:text-lg md:p-2 py-2 ">
-                                <div className="absolute bottom-15 lg:bottom-9 z-20 flex items-center justify-center rounded-md bg-surface-brand px-2 py-1 text-sm font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600">
+                            <div className="absolute bottom-0 z-10 flex w-fit items-center justify-center rounded-lg outline-2 outline-[#E8E8E8] bg-[#FAFAFA] text-center font-extrabold md:text-[24px] md:p-2 py-2 ">
+                                <div className="absolute bottom-15 lg:bottom-11 z-20 w-fit flex items-center justify-center rounded-md bg-surface-brand px-2 py-1 text-sm font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600">
                                     {item.category}
                                 </div>
                                 {item.label}

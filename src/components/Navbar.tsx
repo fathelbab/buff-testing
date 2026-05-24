@@ -1,5 +1,5 @@
 import { useState } from "react";
-import myImage from "../assets/BBlogo.png";
+import myImage from "../assets/imgs/BBlogo.png";
 
 import { TbShoppingBag } from "react-icons/tb";
 import { BiStoreAlt } from "react-icons/bi";

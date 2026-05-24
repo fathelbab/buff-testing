@@ -1,16 +1,28 @@
-import offers from "../assets/Offers.png"
+import offers from "../assets/imgs/OurMenu/Offers.png"
+import beef from "../assets/imgs/OurMenu/Beef.png"
+import chicken from "../assets/imgs/OurMenu/Chicken.png"
+import appetizers from "../assets/imgs/OurMenu/Appetizers.png"
+import dessert from "../assets/imgs/OurMenu/Dessert.png"
+import the100 from "../assets/imgs/OurMenu/The100.png"
+import keto from "../assets/imgs/OurMenu/Keto.png"
+import drinks from "../assets/imgs/OurMenu/Drinks.png"
+import sauces from "../assets/imgs/OurMenu/Sauces.png"
+import buffstuff from "../assets/imgs/OurMenu/BuffStuff.png"
+
+
+
 
 const menuItems = [
     { image: offers, label: "OFFERS" },
-    { image: offers, label: "BEEF" },
-    { image: offers, label: "CHICKEN" },
-    { image: offers, label: "APPETIZERS" },
-    { image: offers, label: "DESSERT" },
-    { image: offers, label: "THE 100" },
-    { image: offers, label: "KETO & LIGHT" },
-    { image: offers, label: "DRINKS" },
-    { image: offers, label: "SAUCES" },
-    { image: offers, label: "BUFF STUFF" },
+    { image: beef, label: "BEEF" },
+    { image: chicken, label: "CHICKEN" },
+    { image: appetizers, label: "APPETIZERS" },
+    { image: dessert, label: "DESSERT" },
+    { image: the100, label: "THE 100" },
+    { image: keto, label: "KETO & LIGHT" },
+    { image: drinks, label: "DRINKS" },
+    { image: sauces, label: "SAUCES" },
+    { image: buffstuff, label: "BUFF STUFF" },
 ]
 
 export default function OurMenu() {
@@ -29,7 +41,7 @@ export default function OurMenu() {
                             />
 
                             {/* FLOATING LABEL */}
-                            <div className="absolute bottom-0 z-10 flex w-[120px] md:w-[155px] lg:w-[180px] items-center justify-center rounded-xl bg-orange-500 py-3 text-sm md:text-base font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600">
+                            <div className="absolute bottom-5 z-10 flex w-[156px] md:w-[156px] lg:w-53 items-center justify-center rounded-xl bg-surface-brand p-3 text-center text-sm md:text-[24px] font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600">
                                 {item.label}
                             </div>
 

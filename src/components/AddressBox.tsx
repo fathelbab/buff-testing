@@ -1,5 +1,5 @@
 
-import image from "../assets/DiningType.png"
+import image from "../assets/imgs/AddressBox/DiningType.png"
 import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function AddressBox() {

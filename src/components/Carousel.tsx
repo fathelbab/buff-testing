@@ -4,12 +4,11 @@ import {
   Autoplay,
   Navigation,
 } from "swiper/modules";
-
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
-import Carousel1 from "../assets/AssistCombo.png"
-import Carousel2 from "../assets/BuffOne.png"
+import Carousel1 from "../assets/imgs/Carousel/AssistCombo.png"
+import Carousel2 from "../assets/imgs/Carousel/BuffOne.png"
 
 const slides = [
   Carousel1,

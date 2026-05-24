@@ -4,6 +4,7 @@ import AddressBox from '../components/AddressBox'
 import OurMenu from '../components/OurMenu'
 import FanFavorites from '../components/FanFavorites'
 import Promos from '../components/Promos'
+import BuffaloAppAd from '../components/BuffaloApp'
 
 export default function Home() {
 
@@ -65,6 +66,7 @@ export default function Home() {
           <FanFavorites />
         </div>
         <Promos/>
+        <BuffaloAppAd/>
       </div>
     </>
   )

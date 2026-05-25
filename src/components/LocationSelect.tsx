@@ -29,7 +29,7 @@ export default function LocationSelect() {
                             <Bike size={14} />
                         </div>
 
-                        <span className="text-lg font-medium text-gray-800">
+                        <span className="text-lg font-medium underline text-gray-800">
                             {selected}
                         </span>
                     </div>

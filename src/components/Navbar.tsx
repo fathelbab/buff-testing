@@ -1,5 +1,5 @@
 import { useState } from "react";
-import myImage from "../assets/imgs/BBlogo.png";
+import BBLogo from "../assets/imgs/BBlogo.png";
 
 import { TbShoppingBag } from "react-icons/tb";
 import { BiStoreAlt } from "react-icons/bi";
@@ -15,8 +15,8 @@ export default function Navbar() {
             <nav className="flex items-center justify-between p-4 text-black shadow-sm md:px-8">
 
                 <img
-                    className="w-[125px] md:w-[150px] object-scale-down"
-                    src={myImage}
+                    className="max-w-[224px] max-h-[48px] object-cover"
+                    src={BBLogo}
                     alt="Logo"
                 />
 

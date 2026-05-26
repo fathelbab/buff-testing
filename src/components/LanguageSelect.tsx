@@ -8,7 +8,7 @@ const options = [
 
 export default function LanguageSelect() {
     return (
-        <div className="w-[130px] h-full">
+        <div className="w-35 md:w-[90px] md:w-[130px]">
             <Select
                 defaultValue={options[0]}
                 options={options}
@@ -26,15 +26,20 @@ export default function LanguageSelect() {
 
                     control: (base, state) => ({
                         ...base,
-                        minHeight: "44px",
+                        minHeight: window.innerWidth < 768 ? "40px" : "52px",
                         borderRadius: "14px",
                         borderColor: "#D9D9D9",
                         backgroundColor: "#FAFAFA",
                         boxShadow: state.isFocused
                             ? "0 0 0 1px #D9D9D9"
                             : "none",
-                        padding: "5px",
+
+                        padding: 0,
                         cursor: "pointer",
+
+                        display: "flex",
+                        alignItems: "center",
+
                         "&:hover": {
                             borderColor: "#D9D9D9",
                         },
@@ -42,23 +47,19 @@ export default function LanguageSelect() {
 
                     valueContainer: (base) => ({
                         ...base,
-                        padding: "5px 2px",
+                        padding: window.innerWidth < 768 ? "0 6px" : "0 10px",
                         display: "flex",
                         alignItems: "center",
-                        gap: "0",
-                    }),
-
-                    singleValue: (base) => ({
-                        ...base,
-                        color: "#1A1A1A",
-                        fontWeight: 500,
-                        fontSize: "24px",
+                        justifyContent: "center",
                     }),
 
                     dropdownIndicator: (base) => ({
                         ...base,
                         color: "#1A1A1A",
-                        paddingRight: "10px",
+                        padding: window.innerWidth < 768 ? "0 6px" : "0 6px",
+                        display: "flex",
+                        alignItems: "center",
+
                         "&:hover": {
                             color: "#1A1A1A",
                         },
@@ -77,17 +78,21 @@ export default function LanguageSelect() {
                             : "#FFFFFF",
                         color: "#1A1A1A",
                         cursor: "pointer",
+                        fontSize: window.innerWidth < 768 ? "16px" : "20px",
                     }),
                 }}
                 formatOptionLabel={(option) => (
-                    <div className="flex items-center gap-2 text-2xl">
-                        <HiOutlineGlobeAlt
-                            size={22}
-                            className="text-[#1A1A1A]"
-                        />
-                        <span>{option.label}</span>
-                    </div>
-                )}
+  <div className="flex items-center gap-1.5">
+    <HiOutlineGlobeAlt
+      size={window.innerWidth < 768 ? 16 : 24}
+      className="text-[#1A1A1A]"
+    />
+
+    <span className="text-sm font-semibold md:text-2xl">
+      {option.label}
+    </span>
+  </div>
+)}
             />
         </div>
     );

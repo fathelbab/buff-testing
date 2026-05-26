@@ -52,16 +52,19 @@ export default function Footer() {
                 </div>
 
             </div>
-            <div className="pt-20 flex justify-between">
-                <div className="self-end w-fit text-sm text-[#898989]">
+            <div className="flex flex-col-reverse gap-6 pt-10 md:pt-20 md:flex-row md:items-center md:justify-between">
+
+                <div className="md:self-end lg:text-bottom text-center w-fit text-sm text-[#898989]">
                     © 2026 BUFFALO BURGER. All rights reserved.
                 </div>
-                <div className="flex gap-5 items-center-safe">
-                    <FaXTwitter color="white" size={30} />
+
+                <div className="flex gap-5 items-center">
+                    <FaXTwitter color="white" size={30}  />
                     <FaInstagram color="white" size={30} />
-                    <CiFacebook color="white" size={30}/>
-                    <LanguageSelect/>
+                    <CiFacebook color="white" size={40} />
+                    <LanguageSelect />
                 </div>
+
             </div>
         </div>
     )

@@ -17,13 +17,13 @@ export default function LanguageSelect() {
                 menuPortalTarget={document.body}
                 classNamePrefix="language-select"
                 className="language-select"
+                aria-label="Select language"
                 components={{
                     IndicatorSeparator: () => null,
                 }}
                 formatOptionLabel={(option) => (
                     <div className="flex items-center gap-1.5">
-                        <HiOutlineGlobeAlt size={16} className="text-[#1A1A1A] md:size-6" />
-
+                        <HiOutlineGlobeAlt size={16} className="text-page-dark md:size-6" />
                         <span className="text-sm font-semibold md:text-2xl">
                             {option.label}
                         </span>

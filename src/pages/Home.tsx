@@ -6,71 +6,48 @@ import FanFavorites from '../components/FanFavorites'
 import Promos from '../components/Promos'
 import BuffaloAppAd from '../components/BuffaloAppAd'
 import Footer from '../components/Footer'
+import SectionHeading from '../components/SectionHeading'
 
 export default function Home() {
-
   return (
-    <>
-      <div className="bg-page">
-        <div>
-          <Navbar />
+    <div className="bg-page">
+      <Navbar />
+
+      <section>
+        <div className="flex flex-col items-center pt-3 py-1 md:py-4">
+          <SectionHeading label="THE REAL THING" />
         </div>
-        <div>
-          <div className="flex flex-col items-center pt-3 py-1 md:py-4">
-            <span className="outline-1 
-            outline-[#E8E8E8] 
-            text-[#151515] 
-            font-black 
-            p-3 
-            rounded  
-            leading-5.5
-            text-lg 
-            md:text-[20px]
-            md:p-4"> THE REAL THING </span>
-          </div>
-          <h2 className="justify-center text-3xl text-[#151515] leading-5 font-black text-center md:py-3 md:text-[60px]"> HUNGRY FOR MORE? </h2>
-        </div>
-        <div>
-          <Carousel />
-        </div>
-        <div className="mx-auto w-full max-w-[1400px] px-4 md:px-8 lg:px-12">
-          <AddressBox />
-        </div>
+        <h2 className="text-center text-3xl font-black leading-5 text-text-primary md:py-3 md:text-[60px]">
+          HUNGRY FOR MORE?
+        </h2>
+        <Carousel />
+      </section>
+
+      <div className="mx-auto w-full max-w-[1400px] px-4 md:px-8 lg:px-12">
+        <AddressBox />
+      </div>
+
+      <section>
         <div className="flex flex-col items-center pt-10 md:pt-14">
-          <span className="outline-1 
-            outline-[#E8E8E8] 
-            text-[#151515] 
-            font-black 
-            p-3 
-            rounded  
-            leading-5.5
-            text-lg 
-            md:text-[20px]
-            md:p-4"> OUR MENU </span>
+          <SectionHeading label="OUR MENU" />
         </div>
         <div className="pt-8 md:pt-12">
           <OurMenu />
         </div>
+      </section>
+
+      <section>
         <div className="flex flex-col items-center pt-10 md:pt-14">
-          <span className="outline-1 
-            outline-[#E8E8E8] 
-            text-[#151515] 
-            font-black 
-            p-3 
-            rounded  
-            leading-5.5
-            text-lg 
-            md:text-[20px]
-            md:p-4"> FAN FAVORITES </span>
+          <SectionHeading label="FAN FAVORITES" />
         </div>
         <div className="pt-8 md:pt-12">
           <FanFavorites />
         </div>
-        <Promos/>
-        <BuffaloAppAd/>
-        <Footer/>
-      </div>
-    </>
+      </section>
+
+      <Promos />
+      <BuffaloAppAd />
+      <Footer />
+    </div>
   )
 }
-

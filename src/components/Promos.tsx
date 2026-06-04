@@ -13,7 +13,7 @@ export default function Promos() {
     <div className="mx-auto w-full max-w-[1400px] px-4 py-14 md:px-8 lg:px-12">
 
       {/* MAIN CONTAINER */}
-      <div className="flex flex-col gap-10 rounded-3xl bg-surface-light p-6 lg:flex-row lg:items-center lg:justify-between lg:p-10">
+      <div className="flex flex-col gap-10 rounded-3xl bg-surface-light p-5 sm:p-6 lg:flex-row lg:items-center lg:justify-between lg:p-10">
 
         {/* LEFT SIDE */}
         <div className="mx-auto w-full max-w-[451px]">
@@ -22,26 +22,26 @@ export default function Promos() {
           <div className="relative flex flex-col items-center pt-6">
 
             {/* TOP LABEL */}
-            <div className="absolute top-0 z-20 w-fit rounded-lg bg-[#1A1A1A] px-4 py-2 text-center font-extrabold text-white text-[24px] md:">
+            <div className="absolute top-0 z-20 w-fit rounded-lg bg-[#1A1A1A] px-4 py-2 text-center text-[18px] font-extrabold text-white sm:text-[24px]">
               JOIN THE
             </div>
 
             {/* MAIN CARD */}
-            <div className="mt-6 flex w-fit items-center justify-center rounded-lg border-2 border-[#E8E8E8] bg-[#FAFAFA] p-4 text-center font-black text-[#151515] text-[40px]">
+            <div className="mt-6 flex w-fit items-center justify-center rounded-lg border-2 border-[#E8E8E8] bg-[#FAFAFA] p-4 text-center text-[30px] font-black text-[#151515] sm:text-[40px]">
               BUFF CLUB
             </div>
 
           </div>
 
           {/* DESCRIPTION */}
-          <div className="py-4 text-center text-[16px] md:text-[20px]">
+          <div className="py-4 text-center text-[15px] md:text-[20px]">
             Earn loyalty points with every order and
             enjoy member exclusive benefits!
           </div>
 
           {/* BUTTON */}
           <a href="">
-            <div className="flex items-center justify-center rounded-lg bg-surface-brand p-4 text-center text-[16px] font-black leading-5 text-[#FAFAFA] transition hover:bg-orange-700">
+            <div className="flex items-center justify-center rounded-lg bg-surface-brand p-4 text-center text-[15px] font-black leading-5 text-[#FAFAFA] transition hover:bg-orange-700 sm:text-[16px]">
               CREATE ACCOUNT
             </div>
           </a>

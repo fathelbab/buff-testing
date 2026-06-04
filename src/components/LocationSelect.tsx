@@ -14,22 +14,22 @@ export default function LocationSelect() {
     ];
 
     return (
-        <div className="relative inline-block">
+        <div className="relative inline-block w-full sm:w-auto">
             {/* BUTTON */}
             <button
                 onClick={() => setOpen(!open)}
-                className="flex min-w-[210px] items-center justify-between rounded-xl border border-gray-300 bg-[#f5f5f5] px-4 py-1 shadow-sm transition hover:shadow-md"
+                className="flex w-full min-w-0 items-center justify-between rounded-xl border border-gray-300 bg-[#f5f5f5] px-3 py-2 shadow-sm transition hover:shadow-md sm:min-w-[210px] sm:px-4 sm:py-1"
             >
-                <div className="flex items-center gap-3">
+                <div className="flex min-w-0 items-center gap-2 sm:gap-3">
                     {/* Flag */}
                     <span className="fi fi-eg"></span>
-                    <div className="flex flex-col items-start">
+                    <div className="flex min-w-0 flex-col items-start">
                         <div className="flex items-center gap-1 text-xs uppercase tracking-wide text-gray-500">
                             DELIVER TO
                             <Bike size={14} />
                         </div>
 
-                        <span className="text-lg font-medium underline text-gray-800">
+                        <span className="max-w-[140px] truncate text-base font-medium underline text-gray-800 sm:text-lg">
                             {selected}
                         </span>
                     </div>

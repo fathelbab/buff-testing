@@ -4,12 +4,12 @@ import { HiOutlineLocationMarker } from "react-icons/hi";
 
 export default function AddressBox() {
     return (
-        <div className="flex w-full items-center rounded-3xl bg-[#FAFAFA] p-4 shadow-xl lg:px-6 lg:pb-10 lg:pt-8">        
+        <div className="flex w-full flex-col items-stretch gap-4 rounded-3xl bg-[#FAFAFA] p-4 shadow-xl lg:flex-row lg:items-center lg:px-6 lg:pb-10 lg:pt-8">        
             {/* LEFT SECTION */}
             <div className="hidden md:flex items-center pr-1">
                 <img
                     src={image}
-                    className="w-xl md:w-70 object-scale-down md:p-2"
+                    className="object-scale-down md:w-70 md:p-2 lg:w-xl"
                 />
             </div>
 
@@ -18,19 +18,19 @@ export default function AddressBox() {
                 <h3 className="pb-2 font-semibold">
                     Enter your Address
                 </h3>
-                <div className="flex gap-2">
-                    <div className="relative flex-1">
+                <div className="flex flex-col gap-3 sm:flex-row">
+                    <div className="relative min-w-0 flex-1">
                         <HiOutlineLocationMarker
                             className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-gray-400"
                         />
 
                         <input
-                            className="w-full sm:text- rounded-xl border border-[#D8D8D8] py-3 pl-12 pr-4 "
+                            className="w-full rounded-xl border border-[#D8D8D8] py-3 pl-12 pr-4 text-sm sm:text-base"
                             placeholder="e.g Building 123, Street 25, Nasr City"
                         />
                     </div>
-                    <div className="flex gap-2 items-center">
-                        <button className="md:w-32.5 w-15 py-3 items-center rounded-xl bg-orange-500 font-bold text-white shadow-md transition hover:bg-orange-700">
+                    <div className="flex items-center gap-2 sm:shrink-0">
+                        <button className="w-full rounded-xl bg-orange-500 px-4 py-3 font-bold text-white shadow-md transition hover:bg-orange-700 sm:w-32">
                             <span className="hidden md:inline">SEARCH HERE</span>
                             <span className="md:hidden">GO</span>
                         </button>

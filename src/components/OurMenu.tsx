@@ -28,20 +28,20 @@ const menuItems = [
 export default function OurMenu() {
     return (
         <div className="mx-auto w-full max-w-[1400px] px-4 md:px-8 lg:px-12">
-            <div className="grid grid-cols-2 gap-x-4 gap-y-8 md:grid-cols-3 lg:grid-cols-5 justify-items-center">
+            <div className="grid grid-cols-1 gap-x-4 gap-y-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 justify-items-center">
                 {menuItems.map((item) => (
                     <a key={item.label} className="group cursor-pointer">
                         <div className="relative flex flex-col items-center pb-10">
 
                             {/* CIRCULAR IMAGE */}
                             <img
-                                className="h-[150px] w-[150px] md:h-[190px] md:w-[190px] lg:h-[236px] lg:w-[236px] rounded-full object-cover bg-[#F5E6D8]"
+                                className="h-[140px] w-[140px] rounded-full bg-[#F5E6D8] object-cover sm:h-[150px] sm:w-[150px] md:h-[190px] md:w-[190px] lg:h-[236px] lg:w-[236px]"
                                 src={item.image}
                                 alt={item.label}
                             />
 
                             {/* FLOATING LABEL */}
-                            <div className="absolute bottom-5 z-10 flex w-[156px] md:w-[156px] lg:w-53 items-center justify-center rounded-xl bg-surface-brand p-3 text-center text-sm md:text-[24px] font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600">
+                            <div className="absolute bottom-5 z-10 flex w-[140px] items-center justify-center rounded-xl bg-surface-brand p-2 text-center text-xs font-extrabold text-white shadow-xl transition duration-300 group-hover:bg-orange-600 sm:w-[156px] sm:p-3 sm:text-sm md:text-[24px] lg:w-53">
                                 {item.label}
                             </div>
 

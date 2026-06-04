@@ -3,11 +3,9 @@ import './App.css'
 
 function App() {
   return (
-    <>
-    <div>
-      <Home></Home>
-   </div>
-    </>
+    <main className="w-full min-w-0">
+      <Home />
+    </main>
   )
 }
 

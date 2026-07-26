@@ -1,81 +1,118 @@
 import { useState } from "react";
 import BBLogo from "../assets/imgs/BBlogo.png";
-
 import { TbShoppingBag } from "react-icons/tb";
 import { BiStoreAlt } from "react-icons/bi";
 import { HiMenu, HiX } from "react-icons/hi";
-
 import LocationSelect from "./LocationSelect";
+import Button from "./Button";
+import { NavLink } from "react-router";
+import { useSelector } from "react-redux";
+import type { RootState } from "../app/store";
+import { useLogout } from "../app/hooks/useLogout";
+import { useLocation } from "react-router";
+
 
 export default function Navbar() {
+    const location = useLocation();
     const [menuOpen, setMenuOpen] = useState(false);
+    const isAuthenticated = useSelector(
+        (state: RootState) => state.auth.isAuthenticated
+    );
+    const logout = useLogout();
 
     return (
         <>
-            <nav className="flex items-center justify-between p-4 text-black shadow-sm md:px-8">
-
-                <img
-                    className="max-w-[224px] max-h-[48px] object-cover"
-                    src={BBLogo}
-                    alt="Logo"
-                />
-
+            <nav className="flex items-center justify-between p-4 text-text-primary shadow-sm md:px-8">
+                <NavLink
+                    to="/"
+                    className={({ isActive }) =>
+                        isActive ? "active" : ""
+                    }
+                >
+                    <img
+                        className="max-w-[224px] max-h-[48px] object-cover"
+                        src={BBLogo}
+                        alt="Buffalo Burger Logo"
+                    />
+                </NavLink>
                 <div className="hidden items-center gap-3 lg:flex">
-                    <LocationSelect/>
+                    <LocationSelect />
 
-                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white  text-black font-bold py-2 px-4 rounded-lg">
-                        <TbShoppingBag />
+                    <Button variant="secondary" size="md" leftIcon={<TbShoppingBag />}>
                         PICKUP
-                    </button>
+                    </Button>
 
-                    <button className="bg-[#E8E8E8] shadow-md justify-items-center hover:bg-black hover:text-white text-black font-bold py-2 px-4 rounded-lg">
-                        <BiStoreAlt />
+                    <Button variant="secondary" size="md" leftIcon={<BiStoreAlt />}>
                         DINE IN
-                    </button>
+                    </Button>
                 </div>
 
                 <div className="hidden gap-4 md:flex">
-                    <button className="flex h-[56px] w-[130px] items-center justify-center rounded-xl border border-[#B0B0B0] bg-white font-bold shadow-md transition hover:bg-black hover:border-white hover:text-white">
-                        LOGIN
-                    </button>
 
-                    <button className="flex h-[56px] w-[130px] items-center justify-center rounded-xl bg-orange-500 font-bold text-white shadow-md transition hover:bg-orange-700">
-                        SIGN UP
-                    </button>
+                    <div className="hidden gap-4 md:flex">
+                        {isAuthenticated ? (
+                            <>
+                                <Button variant="secondary" size="lg">
+                                    MY ACCOUNT
+                                </Button>
+
+                                <Button
+                                    variant="outlined"
+                                    size="lg"
+                                    onClick={logout}
+                                >
+                                    LOGOUT
+                                </Button>
+                            </>
+                        ) : (
+                            <>
+
+                                {location.pathname !== "/login" && (
+                                    <NavLink to="/login">
+                                        <Button variant="outlined" size="lg">
+                                            LOGIN
+                                        </Button>
+                                    </NavLink>
+                                )}
+                                <NavLink to="/signup">
+                                    <Button variant="primary" size="lg">
+                                        SIGN UP
+                                    </Button>
+                                </NavLink>
+                            </>
+                        )}
+                    </div>
                 </div>
 
-                {/* MOBILE HAMBURGER */}
                 <button
                     onClick={() => setMenuOpen(!menuOpen)}
+                    aria-expanded={menuOpen}
+                    aria-label={menuOpen ? "Close menu" : "Open menu"}
                     className="flex items-center justify-center rounded-lg p-2 md:hidden"
                 >
                     {menuOpen ? <HiX size={30} /> : <HiMenu size={30} />}
                 </button>
             </nav>
 
-            {/* MOBILE MENU */}
             {menuOpen && (
                 <div className="flex flex-col gap-4 bg-white px-4 pb-6 shadow-md md:hidden">
-
                     <LocationSelect />
 
-                    <button className="flex h-[56px] w-[32] items-center justify-center gap-2 rounded-4xl bg-[#E8E8E8] font-bold shadow-md">
-                        <TbShoppingBag size={20} />
+                    <Button variant="secondary" className="flex h-[56px] items-center justify-center gap-2 rounded-4xl" leftIcon={<TbShoppingBag size={20} />}>
                         PICKUP
-                    </button>
+                    </Button>
 
-                    <button className="flex h-[56px] items-center justify-center gap-2 rounded-4xl bg-[#E8E8E8] font-bold shadow-md">
-                        <BiStoreAlt size={20} />
+                    <Button variant="secondary" className="flex h-[56px] items-center justify-center gap-2 rounded-4xl" leftIcon={<BiStoreAlt size={20} />}>
                         DINE IN
-                    </button>
+                    </Button>
 
-                    <button className="flex h-[56px] items-center justify-center rounded-2xl border border-[#B0B0B0] bg-white font-bold shadow-md">
+                    <Button variant="outlined" className="flex h-[56px] items-center justify-center rounded-2xl">
                         LOGIN
-                    </button>
+                    </Button>
 
-                    <button className="flex h-[56px] items-center justify-center rounded-2xl bg-orange-500 font-bold text-white shadow-md">
+                    <Button variant="primary" className="flex h-[56px] items-center justify-center rounded-2xl">
                         SIGN UP
-                    </button>
+                    </Button>
                 </div>
             )}
         </>

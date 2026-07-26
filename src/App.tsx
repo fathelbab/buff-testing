@@ -1,13 +1,10 @@
-import Home from './pages/Home'
+import Home from './routes/Home'
 import './App.css'
-
 function App() {
-  return (
-    <>
-    <div>
-      <Home></Home>
-   </div>
-    </>
+  return ( 
+    <main className="w-full min-w-0">
+      <Home />
+    </main>
   )
 }
 

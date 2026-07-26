@@ -1,8 +1,7 @@
-import Home from './pages/Home'
+import Home from './routes/Home'
 import './App.css'
-
 function App() {
-  return (
+  return ( 
     <main className="w-full min-w-0">
       <Home />
     </main>

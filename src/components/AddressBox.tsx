@@ -18,12 +18,12 @@ export default function AddressBox() {
                     Enter your Address
                 </h3>
                 <div className="flex flex-col gap-3 sm:flex-row">
-                    <div className="relative min-w-0 flex-1">
-                        <HiOutlineLocationMarker className="absolute left-4 top-1/2 -translate-y-1/2 text-2xl text-gray-400" />
-                        <label htmlFor="address-input" className="sr-only">Delivery address</label>
+                    <div className="flex min-w-0 flex-1 items-center rounded-xl border border-border-input px-4">
+                        <HiOutlineLocationMarker className="mr-3 text-3xl text-gray-400" />
+
                         <input
                             id="address-input"
-                            className="w-full rounded-xl border border-border-input py-3 pl-12 pr-4 text-sm sm:text-base"
+                            className="h-12 w-full bg-transparent outline-none text-sm sm:text-base"
                             placeholder="e.g Building 123, Street 25, Nasr City"
                         />
                     </div>

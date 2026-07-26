@@ -3,6 +3,7 @@
 
 @theme {
   --color-surface-brand: #FF5F00;
+  --color-surface-disabled-dark: #898989;
   --color-surface-light: #FFDFCC;
   --color-surface-dark: #0A0A0A;
   --color-page: #F7F7F7;
